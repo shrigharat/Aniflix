@@ -1,20 +1,20 @@
 import 'package:AniFlix/components/carousel/carousel_indicator_component.dart';
+import 'package:AniFlix/models/Anime.dart';
 import 'package:flutter/material.dart';
 
 class CarouselItem extends StatelessWidget {
-  final List<String> item;
+  final Anime item;
   final CarouselIndicator carouselIndicator;
 
   CarouselItem({this.item, this.carouselIndicator});
 
   @override
   Widget build(BuildContext context) {
+    AssetImage img = AssetImage(item.imgUrl);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(
-            item[0],
-          ),
+          image: img,
           fit: BoxFit.cover,
         ),
       ),
@@ -34,7 +34,7 @@ class CarouselItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Text(
-                  item[1],
+                  item.title,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
