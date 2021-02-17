@@ -5,7 +5,6 @@ import 'package:AniFlix/blocs/homepage_bloc/homepage_events.dart';
 import 'package:AniFlix/blocs/homepage_bloc/homepage_state.dart';
 import 'package:AniFlix/helpers/fetcher.dart';
 import 'package:AniFlix/models/Anime.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
@@ -55,5 +54,6 @@ class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
           break;
       }
     }
+    yield newState;
   }
 }

@@ -10,6 +10,6 @@ class AnimeList{
     response.forEach((v) {
       animeList.add(Anime.fromJSON(v));
     });
-    return AnimeList(results: animeList.sublist(0, 12));
+    return AnimeList(results: animeList);
   }
 }

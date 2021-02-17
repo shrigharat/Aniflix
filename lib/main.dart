@@ -1,6 +1,7 @@
 import 'package:AniFlix/pages/home/anime_detail_page.dart';
 import 'package:flutter/material.dart';
 
+import 'constants.dart';
 import 'pages/home/home_page.dart';
 
 void main() {
@@ -22,8 +23,8 @@ class MyApp extends StatelessWidget {
       ),
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.white,
-          body: AnimeDetailPage(),
+          backgroundColor: kScaffoldBackgroundColor,
+          body: HomePage(),
         ),
       ),
     );

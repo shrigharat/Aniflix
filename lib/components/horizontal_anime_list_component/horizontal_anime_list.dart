@@ -4,7 +4,7 @@ import 'package:AniFlix/components/loading_component/loading.dart';
 
 import 'package:AniFlix/models/Anime.dart';
 
-import 'anime_card.dart';
+import '../anime_component.dart/anime_card.dart';
 
 class HorizontalAnimeList extends StatelessWidget {
   final String listType;

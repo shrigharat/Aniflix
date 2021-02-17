@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class AnimeDetailImage extends StatelessWidget {
-  NetworkImage myImage;
+  final String imgUrl;
+  final String title;
+
+  AnimeDetailImage({this.imgUrl, this.title});
 
   @override
   Widget build(BuildContext context) {
+  ImageProvider myImage = imgUrl == '' ? AssetImage('') : NetworkImage(imgUrl);
     return Container(
-      margin: EdgeInsets.all(8),
       height: 370,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         image: DecorationImage(
-          image: NetworkImage(
-              'https://cdn.myanimelist.net/images/anime/1386/100624l.jpg'),
+          image: myImage,
           fit: BoxFit.cover,
         ),
       ),
@@ -41,18 +43,20 @@ class AnimeDetailImage extends StatelessWidget {
                 ),
                 child: IconButton(
                   icon: Icon(Icons.arrow_back),
-                  iconSize: 20,
-                  onPressed: (){},
+                  iconSize: 19,
+                  onPressed: (){Navigator.pop(context);},
                   color: Colors.blue[900],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'One Peice',
+                  title,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    height: 1.05,
                   ),
                 ),
               ),
