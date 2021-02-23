@@ -1,17 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:AniFlix/blocs/anime_detail_page_bloc/anime_detail_page_bloc.dart';
 import 'package:AniFlix/blocs/anime_detail_page_bloc/anime_detail_page_events.dart';
 import 'package:AniFlix/blocs/anime_detail_page_bloc/anime_detail_page_state.dart';
-import 'package:AniFlix/components/anime_detail_component/anime_detail_genre_component.dart';
-import 'package:AniFlix/components/anime_detail_component/anime_detail_image_component.dart';
-import 'package:AniFlix/components/anime_detail_component/anime_detail_synopsis_component.dart';
+
 import 'package:AniFlix/components/anime_detail_component/anime_episodes_component.dart';
 import 'package:AniFlix/components/anime_detail_component/anime_info_component.dart';
 import 'package:AniFlix/components/anime_detail_component/anime_recommendations_component.dart';
 import 'package:AniFlix/components/loading_component/loading.dart';
+
 import 'package:AniFlix/constants.dart';
-import 'package:AniFlix/models/Anime.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 class AnimeDetailPage extends StatefulWidget {
   final int animeId;

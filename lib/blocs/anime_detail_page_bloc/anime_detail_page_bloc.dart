@@ -33,7 +33,7 @@ class AnimeDetailPageBloc
       state.animeEpisodesList =
           await Fetcher.animeEpisodesFetcher(event.animeId);
       state.animeRecommendationsList =
-          await Fetcher.animeRecommendationsFetcher(event.animeId);
+          await Fetcher.animeRecommendationsFetcher(url: 'https://api.jikan.moe/v3/anime/${event.animeId}/recommendations', param: 'recommendations');
       state.animeImgUrl = await Fetcher.animeImageStringFetcher(event.animeId);
     }
 

@@ -1,5 +1,5 @@
 import 'package:AniFlix/models/Anime.dart';
-import 'package:AniFlix/pages/home/anime_detail_page.dart';
+import 'package:AniFlix/pages/anime_detail_page.dart';
 import 'package:flutter/material.dart';
 
 class AnimeCard extends StatelessWidget {

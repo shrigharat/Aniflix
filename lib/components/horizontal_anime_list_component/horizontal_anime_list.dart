@@ -18,12 +18,15 @@ class HorizontalAnimeList extends StatelessWidget {
     print('Horizontal $listType list build was called');
 
     return Container(
-      margin: EdgeInsets.symmetric(
-        vertical: 10,
+      margin: EdgeInsets.fromLTRB(
+        0,
+        5,
+        0,
+        2,
       ),
       width: double.infinity,
-      height: 270,
-//      color: Colors.blue,
+      height: 260,
+      // color: Colors.blue,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -37,21 +40,22 @@ class HorizontalAnimeList extends StatelessWidget {
             ),
           ),
           Container(
+            // color: Colors.yellow,
             height: 230,
             width: double.infinity,
             child: animeList.isEmpty
                 ? Loading(
-              loadingMessage: 'Loading...',
-            )
+                    loadingMessage: 'Loading...',
+                  )
                 : ListView.builder(
-              itemCount: animeList.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (BuildContext context, int index) {
-                return AnimeCard(
-                  anime: animeList[index],
-                );
-              },
-            ),
+                    itemCount: animeList.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return AnimeCard(
+                        anime: animeList[index],
+                      );
+                    },
+                  ),
           )
         ],
       ),

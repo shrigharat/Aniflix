@@ -1,6 +1,6 @@
 import 'package:AniFlix/components/carousel/carousel_indicator_component.dart';
 import 'package:AniFlix/models/Anime.dart';
-import 'package:AniFlix/pages/home/anime_detail_page.dart';
+import 'package:AniFlix/pages/anime_detail_page.dart';
 import 'package:flutter/material.dart';
 
 class CarouselItem extends StatelessWidget {

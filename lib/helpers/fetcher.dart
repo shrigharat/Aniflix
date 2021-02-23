@@ -51,14 +51,14 @@ class Fetcher {
     return episodeList;
   }
 
-  static Future<List<Anime>> animeRecommendationsFetcher(int animeId) async {
+  static Future<List<Anime>> animeRecommendationsFetcher({String url, String param} ) async {
     var response = await http
-        .get('https://api.jikan.moe/v3/anime/$animeId/recommendations');
+        .get(url);
     if (response.statusCode == 200) {
       try {
-        return AnimeList.fromJSON(jsonDecode(response.body)['recommendations'])
+        return AnimeList.fromJSON(jsonDecode(response.body)[param])
           .results;
-      }catch(e) {
+      } catch(e) {
         print('Exception was thrown while fetching recommendations!');
       }
     } else {
