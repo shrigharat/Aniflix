@@ -1,3 +1,4 @@
+import 'package:AniFlix/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:AniFlix/models/episode.dart';
@@ -19,7 +20,7 @@ class AnimeEpisodesComponent extends StatelessWidget {
           margin: EdgeInsets.fromLTRB(8, 12, 8, 0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: Colors.blue[900],
+            color: kMyBlueColor,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

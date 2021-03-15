@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
+import 'package:AniFlix/constants.dart';
+
 class AnimeDetailImage extends StatelessWidget {
   final String imgUrl;
   final String title;
+  final addToFavorites;
 
-  AnimeDetailImage({this.imgUrl, this.title});
+  AnimeDetailImage({this.imgUrl, this.title, this.addToFavorites});
 
   @override
   Widget build(BuildContext context) {
-  ImageProvider myImage = imgUrl == '' ? AssetImage('') : NetworkImage(imgUrl);
+    ImageProvider myImage =
+        imgUrl == '' ? AssetImage('') : NetworkImage(imgUrl);
     return Container(
       height: 370,
       width: double.infinity,
@@ -44,21 +48,41 @@ class AnimeDetailImage extends StatelessWidget {
                 child: IconButton(
                   icon: Icon(Icons.arrow_back),
                   iconSize: 19,
-                  onPressed: (){Navigator.pop(context);},
-                  color: Colors.blue[900],
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  color: kMyBlueColor,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  title,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    height: 1.05,
+              Row(
+                children: [
+                  Expanded(
+                    flex: 11,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        title,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          height: 1.05,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                  Expanded(
+                    flex: 2,
+                    child: InkWell(
+                      onTap: () => addToFavorites(),
+                      child: Icon(
+                        Icons.favorite_outline,
+                        color: kMyBlueColor,
+                        size: 28,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

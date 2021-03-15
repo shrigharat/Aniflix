@@ -1,7 +1,9 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:AniFlix/blocs/anime_detail_page_bloc/anime_detail_page_events.dart';
 import 'package:AniFlix/blocs/anime_detail_page_bloc/anime_detail_page_state.dart';
+
 import 'package:AniFlix/helpers/fetcher.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AnimeDetailPageBloc
     extends Bloc<AnimeDetailPageEvent, AnimeDetailPageState> {

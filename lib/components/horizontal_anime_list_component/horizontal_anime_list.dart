@@ -26,7 +26,6 @@ class HorizontalAnimeList extends StatelessWidget {
       ),
       width: double.infinity,
       height: 260,
-      // color: Colors.blue,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -40,7 +39,6 @@ class HorizontalAnimeList extends StatelessWidget {
             ),
           ),
           Container(
-            // color: Colors.yellow,
             height: 230,
             width: double.infinity,
             child: animeList.isEmpty

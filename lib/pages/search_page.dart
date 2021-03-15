@@ -1,13 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:AniFlix/blocs/search_page_bloc/search_page_bloc.dart';
 import 'package:AniFlix/blocs/search_page_bloc/search_page_events.dart';
 import 'package:AniFlix/blocs/search_page_bloc/search_page_state.dart';
+
 import 'package:AniFlix/components/anime_detail_component/anime_recommendations_component.dart';
-import 'package:AniFlix/constants.dart';
-import 'package:flutter/material.dart';
-
 import 'package:AniFlix/components/search_page_component/serach_page_result.component.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:AniFlix/constants.dart';
 
 
 class SearchPage extends StatelessWidget {

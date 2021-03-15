@@ -1,6 +1,9 @@
-import 'package:AniFlix/models/Anime.dart';
-import 'package:AniFlix/pages/anime_detail_page.dart';
 import 'package:flutter/material.dart';
+
+import 'package:AniFlix/pages/anime_detail_page.dart';
+
+import 'package:AniFlix/models/Anime.dart';
+
 
 class AnimeCard extends StatelessWidget {
   final Anime anime;
@@ -21,7 +24,6 @@ class AnimeCard extends StatelessWidget {
         height: 210,
         width: 140,
         decoration: BoxDecoration(
-//              color: Colors.blue,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Container(

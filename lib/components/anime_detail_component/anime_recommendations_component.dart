@@ -1,8 +1,8 @@
-import 'package:AniFlix/components/anime_component.dart/anime_card.dart';
-import 'package:AniFlix/components/anime_component.dart/anime_tile.dart';
-import 'package:AniFlix/components/anime_detail_component/anime_detail_genre_component.dart';
-import 'package:AniFlix/models/Anime.dart';
 import 'package:flutter/material.dart';
+
+import 'package:AniFlix/components/anime_component.dart/anime_card.dart';
+
+import 'package:AniFlix/models/Anime.dart';
 
 class AnimeRecommendationsComponent extends StatelessWidget {
 

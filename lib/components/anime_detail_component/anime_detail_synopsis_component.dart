@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:AniFlix/constants.dart';
+
 class SynopsisComponent extends StatelessWidget {
   final String synopsis;
 
@@ -33,7 +35,7 @@ class SynopsisComponent extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 borderRadius: synopsisRadius,
-                color: Colors.blue[900].withOpacity(0.8),
+                color: kMyBlueColor.withOpacity(0.8),
               ),
               child: Text(
                 synopsis,

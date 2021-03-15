@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:AniFlix/models/Anime.dart';
+import 'package:hive/hive.dart';
 
 import 'anime_detail_genre_component.dart';
 import 'anime_detail_image_component.dart';
@@ -12,6 +13,12 @@ class AnimeInfoComponent extends StatelessWidget {
 
   AnimeInfoComponent({this.anime, this.animeImgUrl});
 
+  void addToFavorites() {
+    final favoritesBox = Hive.box('favorite_anime');
+    favoritesBox.add(anime);
+    print('${anime.title} was added to the database! Yayyyyyy!');
+  }
+
   @override
   Widget build(BuildContext context) {
     print('Tab 1 view build called');
@@ -20,6 +27,7 @@ class AnimeInfoComponent extends StatelessWidget {
       child: ListView(
         children: [
           AnimeDetailImage(
+            addToFavorites: addToFavorites,
             imgUrl: animeImgUrl,
             title: anime.title,
           ),
@@ -46,7 +54,6 @@ class AnimeInfoComponent extends StatelessWidget {
                   'Airing status : ${airingStatus(anime.airing)}',
                   style: TextStyle(
                     fontSize: 16,
-                    
                   ),
                 ),
                 Text(

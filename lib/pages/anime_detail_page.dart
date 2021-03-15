@@ -50,7 +50,7 @@ class _AnimeDetailPageState extends State<AnimeDetailPage> {
               Tab(text: 'Episodes'),
               Tab(text: 'Similar'),
             ],
-            labelColor: Colors.blue[900],
+            labelColor: kMyBlueColor,
           ),
           backgroundColor: kScaffoldBackgroundColor,
           body: BlocBuilder(

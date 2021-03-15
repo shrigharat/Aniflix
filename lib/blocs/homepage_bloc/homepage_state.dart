@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:AniFlix/models/Anime.dart';
 
 class HomePageState {

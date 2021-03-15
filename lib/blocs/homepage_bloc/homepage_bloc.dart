@@ -1,11 +1,14 @@
 import 'dart:async';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:AniFlix/blocs/homepage_bloc/homepage_constants.dart';
 import 'package:AniFlix/blocs/homepage_bloc/homepage_events.dart';
 import 'package:AniFlix/blocs/homepage_bloc/homepage_state.dart';
+
 import 'package:AniFlix/helpers/fetcher.dart';
+
 import 'package:AniFlix/models/Anime.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 class HomePageBloc extends Bloc<HomePageEvent, HomePageState> {
   HomePageBloc() : super(HomePageState.initial());

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:AniFlix/constants.dart';
+
 class Loading extends StatelessWidget {
   final String loadingMessage;
   const Loading({Key key, this.loadingMessage}) : super(key: key);
@@ -18,7 +20,7 @@ class Loading extends StatelessWidget {
           ),
           SizedBox(height: 24),
           CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.blue[900]),
+            valueColor: AlwaysStoppedAnimation<Color>(kMyBlueColor),
           ),
         ],
       ),

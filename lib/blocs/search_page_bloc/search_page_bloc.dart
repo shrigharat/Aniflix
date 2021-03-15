@@ -1,7 +1,9 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:AniFlix/blocs/search_page_bloc/search_page_events.dart';
 import 'package:AniFlix/blocs/search_page_bloc/search_page_state.dart';
+
 import 'package:AniFlix/helpers/fetcher.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SearchPageBloc extends Bloc<SearchPageEvent, SearchPageState> {
 

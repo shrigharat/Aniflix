@@ -1,13 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:AniFlix/blocs/homepage_bloc/homepage_bloc.dart';
 import 'package:AniFlix/blocs/homepage_bloc/homepage_constants.dart';
 import 'package:AniFlix/blocs/homepage_bloc/homepage_events.dart';
 import 'package:AniFlix/blocs/homepage_bloc/homepage_state.dart';
-import 'package:AniFlix/models/Anime.dart';
-import 'package:flutter/material.dart';
+
 
 import 'package:AniFlix/components/horizontal_anime_list_component/horizontal_anime_list.dart';
 import 'package:AniFlix/components/carousel/carousel_component.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,7 +23,6 @@ class _HomePageState extends State<HomePage> {
     _homeBloc.add(FetchAnimeListEvent(listType: HomePageListNames.byPopularityList));
     _homeBloc.add(FetchAnimeListEvent(listType: HomePageListNames.upComingList));
     _homeBloc.add(FetchAnimeListEvent(listType: HomePageListNames.movieList));
-    _homeBloc.add(FetchAnimeListEvent(listType: HomePageListNames.byPopularityList));
     super.initState();
   }
 
@@ -56,6 +56,9 @@ class _HomePageState extends State<HomePage> {
               sectionTitle: 'Movies',
               listType: HomePageListNames.movieList,
               animeList: state.movieList,
+            ),
+            SizedBox(
+              height: 70.0,
             ),
           ],
         );

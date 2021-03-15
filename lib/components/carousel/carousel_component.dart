@@ -1,11 +1,11 @@
-import 'package:AniFlix/components/carousel/carousel_data.dart';
-import 'package:AniFlix/models/Anime.dart';
-import 'package:flutter/material.dart';
 import 'dart:async';
+import 'package:flutter/material.dart';
 
+import 'package:AniFlix/components/carousel/carousel_data.dart';
 import 'carousel_indicator_component.dart';
 import 'carousel_item_component.dart';
 
+import 'package:AniFlix/models/Anime.dart';
 
 class Carousel extends StatefulWidget {
   @override
